@@ -126,7 +126,7 @@ const processSteps = [
     icon: Wrench,
     step: '03',
     title: 'Quote & Plan',
-    description: 'Our electrician provides a clear, detailed quote with no hidden fees.',
+    description: 'We discuss what you\'re trying to achieve, explore your options, and give you honest pricing to reach your best outcome.',
   },
   {
     icon: CheckCircle2,
