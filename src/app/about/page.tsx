@@ -53,7 +53,7 @@ const timeline = [
   {
     year: '2025',
     title: 'HVAC Division',
-    description: 'Neal Carson comes aboard to lead our HVAC division, adding heating and air conditioning to our comprehensive service offerings.',
+    description: 'Neal Caroon comes aboard to lead our HVAC division, adding heating and air conditioning to our comprehensive service offerings.',
   },
   {
     year: 'Today',
