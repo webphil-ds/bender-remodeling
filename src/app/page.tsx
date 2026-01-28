@@ -128,17 +128,6 @@ export default function HomePage() {
         >
           <div className="container-wide py-32 lg:py-40">
             <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand-red/10 border border-brand-red/20 rounded-full text-brand-red text-sm font-medium tracking-wide mb-8">
-                  <Award className="w-4 h-4" />
-                  Trusted Since 2001 · Eastern NC
-                </span>
-              </motion.div>
-
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
