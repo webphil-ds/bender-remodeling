@@ -305,12 +305,23 @@ export default function HomePage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-24 lg:py-36 bg-brand-charcoal overflow-hidden">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
-            {/* Left column - Sticky text */}
-            <div className="lg:col-span-5 lg:sticky lg:top-32 lg:self-start">
-              <FadeIn>
+      <section className="relative py-24 lg:py-36 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/story-1.jpg"
+            alt="Bender Remodeling team at work"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/90 to-brand-charcoal/70" />
+        </div>
+
+        <div className="relative container-wide">
+          <div className="max-w-2xl">
+            <FadeIn>
+              <div className="bg-brand-charcoal/80 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-white/10">
                 <span className="label mb-6 block">Our Story</span>
                 <h2 className="heading-1 text-white mb-6">
                   Born from
@@ -328,23 +339,8 @@ export default function HomePage() {
                   Read our full story
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-              </FadeIn>
-            </div>
-
-            {/* Right column - Image */}
-            <div className="lg:col-span-6 lg:col-start-7">
-              <FadeIn delay={0.2}>
-                <div className="aspect-[3/4] lg:aspect-[4/5] rounded-lg overflow-hidden shadow-soft-lg">
-                  <Image
-                    src="/images/story-1.jpg"
-                    alt="Bender Remodeling team at work"
-                    width={800}
-                    height={1000}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </FadeIn>
-            </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
