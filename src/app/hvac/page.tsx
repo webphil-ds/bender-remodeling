@@ -142,7 +142,7 @@ export default function HVACPage() {
               <FadeIn>
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full text-white/80 text-sm font-medium tracking-wide mb-6 md:mb-8">
                   <ThermometerSun className="w-4 h-4 text-blue-400" />
-                  A Bender Company
+                  A Bender Company · License #19445
                 </div>
               </FadeIn>
               <FadeIn delay={0.1}>
