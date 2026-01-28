@@ -23,6 +23,8 @@ const services = [
   'Whole Home Renovation',
   'Deck or Porch',
   'Garage or Outbuilding',
+  'HVAC',
+  'Electrical',
   'Storm Damage Repair',
   'Other',
 ]
