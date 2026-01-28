@@ -331,43 +331,19 @@ export default function HomePage() {
               </FadeIn>
             </div>
 
-            {/* Right column - Images */}
-            <div className="lg:col-span-6 lg:col-start-7 space-y-5">
+            {/* Right column - Image */}
+            <div className="lg:col-span-6 lg:col-start-7">
               <FadeIn delay={0.2}>
-                <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                <div className="aspect-[3/4] lg:aspect-[4/5] rounded-lg overflow-hidden shadow-soft-lg">
                   <Image
                     src="/images/story-1.jpg"
                     alt="Bender Remodeling team at work"
                     width={800}
-                    height={600}
+                    height={1000}
                     className="w-full h-full object-cover"
                   />
                 </div>
               </FadeIn>
-              <div className="grid grid-cols-2 gap-5">
-                <FadeIn delay={0.3}>
-                  <div className="aspect-square rounded-lg overflow-hidden">
-                    <Image
-                      src="/images/story-2.jpg"
-                      alt="Quality craftsmanship detail"
-                      width={400}
-                      height={400}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </FadeIn>
-                <FadeIn delay={0.4}>
-                  <div className="aspect-square rounded-lg bg-brand-red flex flex-col items-center justify-center p-6 text-center">
-                    <div className="text-5xl lg:text-6xl font-bold text-white mb-2">500+</div>
-                    <div className="text-white/80 font-medium">Projects Completed</div>
-                    <div className="mt-4 flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-white text-white" />
-                      ))}
-                    </div>
-                  </div>
-                </FadeIn>
-              </div>
             </div>
           </div>
         </div>

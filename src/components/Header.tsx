@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone, ArrowRight, ChevronRight } from 'lucide-react'
 
 const navLinks = [
-  { href: '/', label: 'Home' },
   { href: '/remodeling', label: 'Remodeling' },
   { href: '/hvac', label: 'HVAC' },
   { href: '/electrical', label: 'Electrical' },
