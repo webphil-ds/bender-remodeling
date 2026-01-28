@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Facebook, Instagram, ArrowRight, Clock, Award, Thermometer, Zap } from 'lucide-react'
 
@@ -40,6 +41,8 @@ const electricalServices = [
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const pathname = usePathname()
+  const hideContactStrip = pathname === '/electrical'
 
   return (
     <footer className="bg-brand-charcoal text-white relative overflow-hidden">
@@ -49,6 +52,7 @@ export default function Footer() {
       </div>
 
       {/* Quick Contact Strip */}
+      {!hideContactStrip && (
       <div className="relative bg-brand-red">
         <div className="container-wide py-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-white">
@@ -73,6 +77,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      )}
 
       {/* Main Footer Content */}
       <div className="relative container-wide pt-16 pb-12 lg:pt-20 lg:pb-16">
