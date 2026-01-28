@@ -305,7 +305,7 @@ export default function HomePage() {
       </section>
 
       {/* Story Section */}
-      <section className="relative py-24 lg:py-36 overflow-hidden">
+      <section className="relative py-28 lg:py-40 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -315,33 +315,28 @@ export default function HomePage() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/90 to-brand-charcoal/70" />
+          <div className="absolute inset-0 bg-brand-charcoal/40" />
         </div>
 
-        <div className="relative container-wide">
-          <div className="max-w-2xl">
-            <FadeIn>
-              <div className="bg-brand-charcoal/80 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-white/10">
-                <span className="label mb-6 block">Our Story</span>
-                <h2 className="heading-1 text-white mb-6">
-                  Born from
-                  <br />
-                  <span className="text-brand-red">service.</span>
-                </h2>
-                <div className="divider mb-8" />
-                <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                  In 1999, Hurricane Floyd devastated Eastern NC. Our founder Jack Bender spent two years helping restore 24 homes through volunteer work.
-                </p>
-                <p className="text-gray-400 leading-relaxed mb-8">
-                  That experience became the foundation of our company. Twenty-five years later, we still approach every project with that same spirit—treating your home like it belongs to a neighbor, because it does.
-                </p>
-                <Link href="/about" className="link-arrow text-brand-red">
-                  Read our full story
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </FadeIn>
-          </div>
+        <div className="relative container-wide flex justify-center">
+          <FadeIn>
+            <div className="bg-brand-charcoal/90 backdrop-blur-md rounded-xl p-8 md:p-12 lg:p-14 border border-white/10 max-w-2xl text-center shadow-2xl">
+              <span className="text-brand-red text-xs font-semibold uppercase tracking-[0.2em] mb-4 block">Our Story</span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Born from <span className="text-brand-red">service.</span>
+              </h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                In 1999, Hurricane Floyd devastated Eastern NC. Our founder Jack Bender spent two years helping restore 24 homes through volunteer work.
+              </p>
+              <p className="text-gray-400 leading-relaxed mb-8">
+                That experience became the foundation of our company. Twenty-five years later, we still approach every project with that same spirit—treating your home like it belongs to a neighbor, because it does.
+              </p>
+              <Link href="/about" className="btn-primary inline-flex">
+                Read Our Full Story
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
