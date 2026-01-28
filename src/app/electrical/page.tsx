@@ -36,6 +36,13 @@ const services = [
       'Code compliance upgrades',
     ],
     cta: 'Start Your Project',
+    bg: 'bg-gradient-to-br from-amber-400 to-yellow-500',
+    iconBg: 'bg-white/90',
+    iconColor: 'text-amber-600',
+    textColor: 'text-gray-900',
+    textMuted: 'text-gray-800',
+    checkColor: 'text-gray-900',
+    ctaColor: 'text-gray-900 hover:text-gray-700',
   },
   {
     id: 'panels',
@@ -50,6 +57,13 @@ const services = [
       'Meter base upgrades',
     ],
     cta: 'Schedule an Assessment',
+    bg: 'bg-gradient-to-br from-gray-800 to-gray-900',
+    iconBg: 'bg-yellow-500',
+    iconColor: 'text-gray-900',
+    textColor: 'text-white',
+    textMuted: 'text-gray-300',
+    checkColor: 'text-yellow-400',
+    ctaColor: 'text-yellow-400 hover:text-yellow-300',
   },
   {
     id: 'lighting',
@@ -65,6 +79,13 @@ const services = [
       'Smart lighting systems',
     ],
     cta: 'Brighten Your Home',
+    bg: 'bg-gradient-to-br from-sky-400 to-blue-500',
+    iconBg: 'bg-white/90',
+    iconColor: 'text-sky-600',
+    textColor: 'text-white',
+    textMuted: 'text-sky-100',
+    checkColor: 'text-white',
+    ctaColor: 'text-white hover:text-sky-100',
   },
   {
     id: 'generators',
@@ -79,6 +100,13 @@ const services = [
       'Propane & natural gas hookups',
     ],
     cta: 'Get Protected',
+    bg: 'bg-gradient-to-br from-emerald-500 to-teal-600',
+    iconBg: 'bg-white/90',
+    iconColor: 'text-emerald-600',
+    textColor: 'text-white',
+    textMuted: 'text-emerald-100',
+    checkColor: 'text-white',
+    ctaColor: 'text-white hover:text-emerald-100',
   },
 ]
 
@@ -141,39 +169,39 @@ export default function ElectricalPage() {
             </p>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => {
               const Icon = service.icon
               return (
                 <FadeIn key={service.id} delay={index * 0.1}>
                   <div
                     id={service.id}
-                    className="group relative bg-gray-50 rounded-2xl p-8 md:p-10 hover:bg-gray-100 transition-colors scroll-mt-32"
+                    className={`group relative rounded-2xl p-8 md:p-10 scroll-mt-32 ${service.bg} shadow-lg hover:shadow-xl transition-shadow`}
                   >
                     <div className="flex items-start justify-between mb-6">
-                      <div className="w-14 h-14 rounded-xl bg-yellow-500 flex items-center justify-center">
-                        <Icon className="w-7 h-7 text-gray-900" />
+                      <div className={`w-14 h-14 rounded-xl ${service.iconBg} flex items-center justify-center shadow-sm`}>
+                        <Icon className={`w-7 h-7 ${service.iconColor}`} />
                       </div>
                       <Link
                         href="/contact"
-                        className="opacity-0 group-hover:opacity-100 inline-flex items-center gap-1 text-sm font-semibold text-yellow-600 transition-opacity"
+                        className={`opacity-0 group-hover:opacity-100 inline-flex items-center gap-1 text-sm font-semibold ${service.ctaColor} transition-opacity`}
                       >
                         {service.cta}
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    <h3 className={`text-2xl font-bold ${service.textColor} mb-3`}>
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className={`${service.textMuted} mb-6 leading-relaxed`}>
                       {service.description}
                     </p>
 
                     <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
                       {service.features.map((feature) => (
-                        <li key={feature} className="flex items-center gap-2 text-sm text-gray-600">
-                          <CheckCircle2 className="w-4 h-4 text-yellow-500 flex-shrink-0" />
+                        <li key={feature} className={`flex items-center gap-2 text-sm ${service.textMuted}`}>
+                          <CheckCircle2 className={`w-4 h-4 ${service.checkColor} flex-shrink-0`} />
                           {feature}
                         </li>
                       ))}
