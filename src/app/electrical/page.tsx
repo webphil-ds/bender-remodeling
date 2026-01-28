@@ -40,6 +40,7 @@ const services = [
       'Whole house generator',
       'Code compliance upgrades',
     ],
+    cta: 'Start Your Project',
   },
   {
     id: 'panels',
@@ -54,6 +55,7 @@ const services = [
       'Breaker replacements',
       'Meter base upgrades',
     ],
+    cta: 'Schedule an Assessment',
   },
   {
     id: 'lighting',
@@ -69,6 +71,7 @@ const services = [
       'Dimmer switches',
       'Smart lighting systems',
     ],
+    cta: 'Brighten Your Home',
   },
   {
     id: 'generators',
@@ -83,6 +86,7 @@ const services = [
       'Load management',
       'Propane and natural gas hookups',
     ],
+    cta: 'Get Protected',
   },
 ]
 
@@ -264,7 +268,7 @@ export default function ElectricalPage() {
                         </div>
 
                         <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded font-semibold text-sm transition-all duration-300 bg-yellow-500 text-gray-900 hover:bg-yellow-400 hover:-translate-y-0.5">
-                          Get a Quote
+                          {service.cta}
                           <ArrowRight className="w-4 h-4" />
                         </Link>
                       </div>
