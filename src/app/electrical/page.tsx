@@ -35,9 +35,9 @@ const services = [
     features: [
       'New home wiring',
       'Whole-house rewiring',
-      'Circuit additions',
+      'Electrical panel upgrades',
       'Outlet and switch installation',
-      'Dedicated appliance circuits',
+      'Whole house generator',
       'Code compliance upgrades',
     ],
   },
@@ -46,14 +46,13 @@ const services = [
     icon: Gauge,
     title: 'Panel Upgrades',
     tagline: 'Power for today\'s needs',
-    description: 'Older electrical panels may not meet the demands of modern homes. We upgrade panels to provide the capacity you need safely, whether you\'re adding a workshop, EV charger, or just need more circuits.',
+    description: 'Modern homes and insurance requirements often demand more electrical capacity. We upgrade panels to provide the power you need safely, whether you\'re adding a workshop, EV charger, or just need more circuits.',
     features: [
       'Panel replacements',
-      '200 amp service upgrades',
+      '200/400 amp service upgrades',
       'Subpanel installations',
       'Breaker replacements',
       'Meter base upgrades',
-      'Grounding system improvements',
     ],
   },
   {
@@ -61,7 +60,7 @@ const services = [
     icon: Lightbulb,
     title: 'Lighting',
     tagline: 'Illuminate your space',
-    description: 'Good lighting transforms a home. We install everything from recessed lights and ceiling fans to landscape lighting and smart home controls—enhancing both function and ambiance.',
+    description: 'Good lighting transforms a home. We install everything from recessed lights and ceiling fans to smart home controls—enhancing both function and ambiance.',
     features: [
       'Recessed lighting installation',
       'Ceiling fan wiring',
@@ -74,13 +73,12 @@ const services = [
   {
     id: 'generators',
     icon: Power,
-    title: 'Generators & Backup Power',
+    title: 'Whole Home Generators',
     tagline: 'Power when you need it',
-    description: 'Eastern NC weather can be unpredictable. We install and service whole-home generators and transfer switches so you\'re never left in the dark during storms or outages.',
+    description: 'Eastern NC weather can be unpredictable. We install whole-home generators and transfer switches so you\'re never left in the dark during storms or outages.',
     features: [
       'Whole-home generator installation',
       'Transfer switch installation',
-      'Generator maintenance',
       'Battery backup systems',
       'Load management',
       'Propane and natural gas hookups',
