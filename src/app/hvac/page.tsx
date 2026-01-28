@@ -14,13 +14,10 @@ import {
   Snowflake,
   Flame,
   Wrench,
-  Clock,
   Shield,
   ThermometerSun,
   Fan,
-  Zap,
   CheckCircle2,
-  AlertTriangle,
   Calendar,
   Award,
   Users,
@@ -33,7 +30,7 @@ const services = [
     icon: Snowflake,
     title: 'AC Installation',
     tagline: 'Stay cool all summer',
-    description: 'From single units to whole-home central air systems, we install energy-efficient cooling solutions sized perfectly for your space. All major brands, professional installation, and manufacturer warranties honored.',
+    description: 'From single units to whole-home central air systems, we install energy-efficient cooling solutions sized perfectly for your space. All major brands, professional installation. Manufacturer (PARTS) warranties honored.',
     features: [
       'Central air conditioning systems',
       'Ductless mini-split systems',
@@ -53,9 +50,8 @@ const services = [
       'Heat pump systems',
       'Gas & electric furnaces',
       'Dual fuel systems',
-      'Radiant heating',
+      'Geothermal systems',
       'Zoned heating solutions',
-      'Backup heating systems',
     ],
   },
   {
@@ -63,7 +59,7 @@ const services = [
     icon: Wrench,
     title: 'Repairs & Maintenance',
     tagline: 'Keep systems running',
-    description: "Regular maintenance extends equipment life and prevents costly breakdowns. When repairs are needed, we diagnose accurately and fix it right the first time—no unnecessary upsells.",
+    description: "Regular maintenance extends equipment life and helps prevent costly breakdowns. When repairs are needed, we diagnose accurately and fix it right the first time—no unnecessary upsells.",
     features: [
       'Seasonal tune-ups',
       'Filter replacement programs',
@@ -71,21 +67,6 @@ const services = [
       'Electrical & thermostat repair',
       'Compressor & motor service',
       'Ductwork inspection & sealing',
-    ],
-  },
-  {
-    id: 'emergency',
-    icon: AlertTriangle,
-    title: 'Emergency Service',
-    tagline: "When you can't wait",
-    description: "HVAC emergencies don't wait for business hours. Whether it's a summer heat wave or winter cold snap, we're here when you need us most with prompt, professional emergency response.",
-    features: [
-      'Same-day emergency calls',
-      'After-hours availability',
-      'Quick diagnostic service',
-      'Temporary solutions when needed',
-      'Priority scheduling',
-      'Honest emergency pricing',
     ],
   },
 ]
@@ -237,7 +218,7 @@ export default function HVACPage() {
               Complete HVAC solutions
             </h2>
             <p className="body-large max-w-2xl mx-auto">
-              From installation to emergency repairs, we handle all your heating and cooling needs with the same quality focus that defines everything we do.
+              From installation to repairs and maintenance, we handle all your heating and cooling needs with the same quality focus that defines everything we do.
             </p>
           </FadeIn>
 
@@ -250,7 +231,6 @@ export default function HVACPage() {
                 installation: 'bg-blue-100 text-blue-600',
                 heating: 'bg-orange-100 text-orange-600',
                 repairs: 'bg-green-100 text-green-600',
-                emergency: 'bg-red-100 text-red-600',
               }
               const accentColor = iconColors[service.id as keyof typeof iconColors] || 'bg-blue-100 text-blue-600'
 
@@ -269,8 +249,7 @@ export default function HVACPage() {
                         <div className={`aspect-[4/3] rounded-2xl overflow-hidden ${
                           service.id === 'installation' ? 'bg-gradient-to-br from-blue-500 to-blue-700' :
                           service.id === 'heating' ? 'bg-gradient-to-br from-orange-500 to-red-600' :
-                          service.id === 'repairs' ? 'bg-gradient-to-br from-green-500 to-teal-600' :
-                          'bg-gradient-to-br from-red-500 to-rose-600'
+                          'bg-gradient-to-br from-green-500 to-teal-600'
                         }`}>
                           <div className="absolute inset-0 flex items-center justify-center">
                             <div className="text-center text-white">
@@ -297,8 +276,7 @@ export default function HVACPage() {
                         <span className={`text-xs font-semibold uppercase tracking-[0.2em] mb-3 block ${
                           service.id === 'installation' ? 'text-blue-600' :
                           service.id === 'heating' ? 'text-orange-600' :
-                          service.id === 'repairs' ? 'text-green-600' :
-                          'text-red-600'
+                          'text-green-600'
                         }`}>{service.tagline}</span>
                         <h2 className="heading-2 text-brand-charcoal mb-5">
                           {service.title}
@@ -316,8 +294,7 @@ export default function HVACPage() {
                               <CheckCircle2 className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
                                 service.id === 'installation' ? 'text-blue-600' :
                                 service.id === 'heating' ? 'text-orange-600' :
-                                service.id === 'repairs' ? 'text-green-600' :
-                                'text-red-600'
+                                'text-green-600'
                               }`} />
                               <span className="text-brand-gray text-sm">
                                 {feature}
@@ -329,10 +306,9 @@ export default function HVACPage() {
                         <Link href="/contact" className={`inline-flex items-center gap-2 px-6 py-3.5 rounded font-semibold text-sm transition-all duration-300 text-white ${
                           service.id === 'installation' ? 'bg-blue-600 hover:bg-blue-500' :
                           service.id === 'heating' ? 'bg-orange-600 hover:bg-orange-500' :
-                          service.id === 'repairs' ? 'bg-green-600 hover:bg-green-500' :
-                          'bg-red-600 hover:bg-red-500'
+                          'bg-green-600 hover:bg-green-500'
                         } hover:-translate-y-0.5`}>
-                          {service.id === 'emergency' ? 'Call Now' : 'Get a Quote'}
+                          Get a Quote
                           <ArrowRight className="w-4 h-4" />
                         </Link>
                       </div>
@@ -351,7 +327,7 @@ export default function HVACPage() {
           <FadeIn className="text-center mb-16">
             <span className="text-blue-600 text-xs font-semibold uppercase tracking-[0.2em] mb-4 block">Why Bender</span>
             <h2 className="heading-2 text-brand-charcoal mb-6">
-              The Bender difference
+              The Bender Difference
             </h2>
             <p className="body-large max-w-2xl mx-auto">
               We're not just another HVAC company. We're your neighbors, backed by 25+ years of trusted service in Eastern NC.
@@ -417,30 +393,6 @@ export default function HVACPage() {
               )
             })}
           </StaggerContainer>
-        </div>
-      </section>
-
-      {/* Emergency Banner */}
-      <section className="py-12 bg-gradient-to-r from-red-600 to-orange-600">
-        <div className="container-wide">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-white">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                <Zap className="w-7 h-7" />
-              </div>
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold">HVAC Emergency?</h3>
-                <p className="text-white/80">We offer same-day emergency service when you need it most.</p>
-              </div>
-            </div>
-            <a
-              href="tel:252-242-4822"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-red-600 font-semibold rounded hover:bg-gray-100 transition-colors"
-            >
-              <Phone className="w-5 h-5" />
-              Call Now: 252-242-HVAC
-            </a>
-          </div>
         </div>
       </section>
 

@@ -11,6 +11,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/remodeling', label: 'Remodeling' },
   { href: '/hvac', label: 'HVAC' },
+  { href: '/electrical', label: 'Electrical' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },

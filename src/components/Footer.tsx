@@ -3,12 +3,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, Facebook, ArrowRight, Clock, Award, Thermometer } from 'lucide-react'
+import { Phone, Mail, MapPin, Facebook, Instagram, ArrowRight, Clock, Award, Thermometer, Zap } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Remodeling', href: '/remodeling' },
   { label: 'HVAC', href: '/hvac' },
+  { label: 'Electrical', href: '/electrical' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
@@ -28,7 +29,13 @@ const hvacServices = [
   { label: 'AC Installation', href: '/hvac#installation' },
   { label: 'Heating Systems', href: '/hvac#heating' },
   { label: 'Repairs & Maintenance', href: '/hvac#repairs' },
-  { label: 'Emergency Service', href: '/hvac#emergency' },
+]
+
+const electricalServices = [
+  { label: 'Residential Wiring', href: '/electrical#residential' },
+  { label: 'Panel Upgrades', href: '/electrical#panels' },
+  { label: 'Lighting', href: '/electrical#lighting' },
+  { label: 'Generators', href: '/electrical#generators' },
 ]
 
 export default function Footer() {
@@ -98,17 +105,31 @@ export default function Footer() {
             </div>
 
             {/* Social */}
-            <motion.a
-              href="https://www.facebook.com/BenderRemodeling/"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/5 hover:bg-white/10 rounded-lg transition-colors text-sm font-medium"
-            >
-              <Facebook size={18} />
-              <span>Follow on Facebook</span>
-            </motion.a>
+            <div className="flex gap-3">
+              <motion.a
+                href="https://www.facebook.com/BenderRemodeling/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-10 h-10 bg-white/5 hover:bg-white/10 rounded-lg flex items-center justify-center transition-colors"
+                aria-label="Follow on Facebook"
+              >
+                <Facebook size={18} />
+              </motion.a>
+              <motion.a
+                href="https://www.instagram.com/benderremodeling/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-10 h-10 bg-white/5 hover:bg-white/10 rounded-lg flex items-center justify-center transition-colors"
+                aria-label="Follow on Instagram"
+              >
+                <Instagram size={18} />
+              </motion.a>
+            </div>
+            <p className="text-xs text-gray-500 mt-3">Follow us on social media</p>
           </div>
 
           {/* Navigation */}
@@ -151,7 +172,7 @@ export default function Footer() {
             </ul>
 
             {/* HVAC Services */}
-            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-red mb-5 mt-8">
+            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-400 mb-5 mt-8">
               <span className="flex items-center gap-2">
                 <Thermometer className="w-3.5 h-3.5" />
                 Heating & Air
@@ -164,7 +185,28 @@ export default function Footer() {
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors text-sm inline-flex items-center group"
                   >
-                    <span className="w-0 group-hover:w-2 h-px bg-brand-red mr-0 group-hover:mr-2 transition-all duration-300" />
+                    <span className="w-0 group-hover:w-2 h-px bg-blue-400 mr-0 group-hover:mr-2 transition-all duration-300" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Electrical Services */}
+            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-yellow-500 mb-5 mt-8">
+              <span className="flex items-center gap-2">
+                <Zap className="w-3.5 h-3.5" />
+                Electrical
+              </span>
+            </h4>
+            <ul className="space-y-3">
+              {electricalServices.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors text-sm inline-flex items-center group"
+                  >
+                    <span className="w-0 group-hover:w-2 h-px bg-yellow-500 mr-0 group-hover:mr-2 transition-all duration-300" />
                     {link.label}
                   </Link>
                 </li>
@@ -246,11 +288,18 @@ export default function Footer() {
             <p>
               © {currentYear} Bender Remodeling, Inc. All rights reserved.
             </p>
-            <p className="text-center md:text-right">
-              <span className="text-brand-red">Licensed General Contractor</span>
-              <span className="mx-2">·</span>
-              Serving Craven, Jones, Carteret, Pamlico & Onslow Counties
-            </p>
+            <div className="text-center md:text-right space-y-1">
+              <p>
+                <span className="text-brand-red">GC #63697</span>
+                <span className="mx-2">·</span>
+                <span className="text-blue-400">HVAC #19445</span>
+                <span className="mx-2">·</span>
+                <span className="text-yellow-500">Electrical #L23375</span>
+              </p>
+              <p>
+                Serving Craven, Jones, Carteret, Pamlico & Onslow Counties
+              </p>
+            </div>
           </div>
         </div>
       </div>

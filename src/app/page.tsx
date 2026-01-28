@@ -85,7 +85,6 @@ const portfolioItems = [
 
 const stats = [
   { value: '25+', label: 'Years Experience' },
-  { value: '500+', label: 'Projects Completed' },
   { value: '5', label: 'Counties Served' },
   { value: '100%', label: 'Licensed & Insured' },
 ]
@@ -111,7 +110,7 @@ export default function HomePage() {
           className="absolute inset-0"
         >
           <Image
-            src="/images/hero-home.jpg"
+            src="/images/service-kitchens.jpg"
             alt="Beautiful kitchen remodel"
             fill
             priority
@@ -146,9 +145,9 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-5xl sm:text-6xl md:text-7xl lg:text-display-lg font-bold text-white leading-[0.95] tracking-tight mb-8"
               >
-                We build
+                Trust. Respect.
                 <br />
-                <span className="text-brand-red">what lasts.</span>
+                <span className="text-brand-red">Excellence.</span>
               </motion.h1>
 
               <motion.p
@@ -157,7 +156,7 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="text-xl md:text-2xl text-gray-300 max-w-xl mb-10 leading-relaxed"
               >
-                Kitchens, bathrooms, additions & complete renovations.
+                We build what lasts. Kitchens, bathrooms, additions & complete renovations.
                 Quality craftsmanship in New Bern and beyond.
               </motion.p>
 
@@ -467,6 +466,45 @@ export default function HomePage() {
               </div>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* Mission Statement Section */}
+      <section className="section-padding bg-white">
+        <div className="container-wide">
+          <FadeIn className="text-center mb-12 lg:mb-16">
+            <span className="label mb-4 block">Our Mission</span>
+            <h2 className="heading-2 text-brand-charcoal mb-4">
+              What We Stand For
+            </h2>
+            <p className="text-xl text-brand-gray max-w-2xl mx-auto">
+              To be the best remodeler in Eastern North Carolina.
+            </p>
+          </FadeIn>
+
+          <StaggerContainer className="grid md:grid-cols-3 gap-8 lg:gap-12">
+            {[
+              {
+                title: 'Trust',
+                description: 'Reliance on the integrity, ability, and surety of our people, our products, and our service.',
+              },
+              {
+                title: 'Respect',
+                description: 'Relationships built on commitment to our customers, their property, and their time.',
+              },
+              {
+                title: 'Excellence',
+                description: 'A passion for doing our best, translates into a finished product that you will love.',
+              },
+            ].map((item, index) => (
+              <StaggerItem key={item.title}>
+                <div className="text-center p-8 bg-brand-cream rounded-xl">
+                  <h3 className="text-2xl font-bold text-brand-red mb-4">{item.title}</h3>
+                  <p className="text-brand-gray leading-relaxed">{item.description}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
 

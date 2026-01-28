@@ -111,12 +111,11 @@ const services = [
     title: 'Garages & Outbuildings',
     tagline: 'Functional additions',
     cta: 'Start Your Build',
-    description: 'From attached garages to detached workshops, we build outbuildings that serve your needs and complement your property. Authorized Rigid steel building installers for commercial-grade durability.',
+    description: 'From attached garages to detached workshops, we build outbuildings that serve your needs and complement your property.',
     features: [
       'Attached and detached garages',
       'Carports and vehicle covers',
       'Workshops and storage buildings',
-      'Steel buildings (authorized Rigid dealer)',
       'Garage door installation',
       'Interior finishing and organization',
     ],
@@ -134,7 +133,7 @@ const processSteps = [
     icon: FileText,
     step: '02',
     title: 'Proposal',
-    description: 'You receive a detailed proposal with scope, timeline, and transparent pricing. No surprises.',
+    description: 'You receive a detailed proposal with scope, timeline, and transparent pricing.',
   },
   {
     icon: Wrench,

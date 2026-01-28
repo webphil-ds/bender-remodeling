@@ -38,12 +38,22 @@ const timeline = [
   {
     year: '2007',
     title: 'Unlimited License',
-    description: 'Earned unlimited contractor status and became an authorized Rigid steel building installer, expanding our capabilities.',
+    description: 'Earned unlimited contractor status, expanding our capabilities to take on larger residential and commercial projects.',
   },
   {
     year: '2016',
     title: 'Bender Remodeling',
     description: 'Renamed to Bender Remodeling, Inc. to better reflect our focus: transforming homes across Eastern North Carolina.',
+  },
+  {
+    year: '2023',
+    title: 'Electrical Services',
+    description: 'Keith Eubanks joins the team, bringing licensed electrical services in-house and expanding our full-service capabilities.',
+  },
+  {
+    year: '2025',
+    title: 'HVAC Division',
+    description: 'Neal Carson comes aboard to lead our HVAC division, adding heating and air conditioning to our comprehensive service offerings.',
   },
   {
     year: 'Today',
@@ -99,8 +109,8 @@ export default function AboutPage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 className="heading-display text-white mb-6 max-w-4xl">
-              Built on Service,
-              <span className="text-brand-red"> Driven by Craft</span>
+              Built on
+              <span className="text-brand-red"> Service</span>
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
