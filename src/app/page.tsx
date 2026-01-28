@@ -110,7 +110,7 @@ export default function HomePage() {
           className="absolute inset-0"
         >
           <Image
-            src="/images/service-kitchens.jpg"
+            src="/images/hero-kitchen.jpg"
             alt="Beautiful kitchen remodel"
             fill
             priority
