@@ -30,7 +30,7 @@ const services = [
     icon: Snowflake,
     title: 'AC Installation',
     tagline: 'Stay cool all summer',
-    description: 'From single units to whole-home central air systems, we install energy-efficient cooling solutions sized perfectly for your space. All major brands, professional installation. Manufacturer (PARTS) warranties honored.',
+    description: 'From single units to whole-home central air systems, we install energy-efficient cooling solutions sized perfectly for your space. All major brands, professional installation. Manufacturer parts warranties honored.',
     features: [
       'Central air conditioning systems',
       'Ductless mini-split systems',
