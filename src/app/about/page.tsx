@@ -252,7 +252,7 @@ export default function AboutPage() {
               const Icon = value.icon
               return (
                 <StaggerItem key={value.title}>
-                  <div className="flex gap-5 p-8 bg-brand-cream rounded-xl hover:shadow-soft transition-shadow duration-300">
+                  <div className="flex gap-5 p-8 bg-brand-cream rounded-xl hover:shadow-soft transition-shadow duration-300 h-full">
                     <div className="w-14 h-14 bg-brand-red/10 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Icon className="w-7 h-7 text-brand-red" />
                     </div>
