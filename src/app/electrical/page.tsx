@@ -231,7 +231,7 @@ export default function ElectricalPage() {
               {processSteps.map((step, index) => (
                 <FadeIn key={step.num} delay={index * 0.1}>
                   <div className="relative">
-                    <div className="text-6xl font-bold text-yellow-500/20 mb-2">
+                    <div className="text-6xl font-bold text-yellow-500/50 mb-2">
                       {step.num}
                     </div>
                     <h3 className="text-xl font-bold text-white mb-1">
