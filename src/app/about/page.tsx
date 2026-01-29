@@ -195,7 +195,7 @@ export default function AboutPage() {
                 <FadeIn key={item.year} delay={index * 0.1}>
                   <div className="relative md:grid md:grid-cols-2 md:gap-12 mb-12 last:mb-0">
                     {/* Year side - left for even, right for odd */}
-                    <div className={`hidden md:flex items-start ${
+                    <div className={`hidden md:flex items-center ${
                       isEven ? 'justify-end pr-12' : 'order-2 justify-start pl-12'
                     }`}>
                       <div className="text-5xl lg:text-6xl font-bold text-brand-red/20 leading-none">
@@ -204,7 +204,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* Center dot */}
-                    <div className="hidden md:block absolute left-1/2 top-3 -translate-x-1/2 z-10">
+                    <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                       <div className="w-4 h-4 bg-brand-red rounded-full ring-4 ring-brand-cream shadow-sm" />
                     </div>
 
